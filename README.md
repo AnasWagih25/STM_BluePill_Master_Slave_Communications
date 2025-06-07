@@ -22,39 +22,9 @@ This project connects three STM32 Blue Pill boards in a master-slave UART commun
 
 ## Hardware Connections (Wiring Diagram)
 
-![STM32 Blue Pill Master-Slave Wiring Diagram](STM32_BluePill_Master-Slave.png)
+You can view the wiring schematic here:
 
-**Connection details:**
-
-**Slave 1:**
-
-- Button connected to PB4 with internal pull-up enabled
-- 7-segment display (common anode) connected to segments:
-  - PB8 → Segment A
-  - PB9 → Segment B
-  - PB10 → Segment C
-  - PB11 → Segment D
-  - PB12 → Segment E
-  - PB13 → Segment F
-  - PB14 → Segment G
-- Common anode pin connected to +3.3V
-
-**Master:**
-
-- Onboard LED connected to PB2
-- UART RX connected to Slave 1 TX (Slave 1 PA2 → Master PA3)
-- UART TX connected to Slave 2 RX (Master PB10 → Slave 2 PB11)
-- UART RX connected to Slave 2 TX (Master PB11 ← Slave 2 PB10)
-
-**Slave 2:**
-
-- LED connected to PC13 with appropriate resistor
-- UART RX connected to Master TX (Slave 2 PB11 ← Master PB10)
-- UART TX connected to Master RX (Slave 2 PB10 → Master PB11)
-
-**Power:**
-
-- All devices share common 3.3V and GND
+[STM32 Blue Pill Master-Slave Wiring Diagram (PDF)](STM32_BluePill_Master-Slave.pdf)
 
 ---
 
